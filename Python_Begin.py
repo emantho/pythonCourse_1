@@ -94,6 +94,7 @@ print('Python' in course) # IN operator produce a boolean value
 """
 
 #Arithmetic Operations
+"""
 print(2 + 3) # Addition
 print(2 - 3) # 
 print(2 * 3) #Multiplication
@@ -104,16 +105,187 @@ print(2 ** 3) # exponential o power
 x = 10
 x += 3 # is the same as x = x + 3. It´s posible do it with -=, *=, /= and so on
 print(x)
+"""
 
+# operations precendent
+"""
+exponentiation 2**3
+multiplication or division
+addition or sustraction
+"""
 
+# Math function
+"""
+import math # This make available all math bibliotec
 
+x = 2.9
+print(round(x))
+print(abs(x))
 
+print(math.ceil(2.9))
+"""
 
+# If Statements
+'''if it´s hot
+    It´s a hot day
+    Drink plenty of water
+Otherwise if it´s cold
+    it´s a cold day
+    waer warm clothes
+oherwise
+    it´s a lovely day
 
+hot_day = False
+cold_day = False
 
+if hot_day == True:
+    print('It´s a Hot day, drink plenty of water' )
+elif cold_day == True:
+    print('It´s a Cold day, wear warm clothes')
+else:
+    print('It´s a lovely day')
 
+# Excercise
+""" Price house is $1M
+    if buyer has GOOD CREDIT
+        they need to put down 10%
+    otherwise
+        they need to put down 20%
+    print the down payment
+"""
+price = 1000000
+buyer_good = True
+if buyer_good:
+    down_pay = price * .1
+else:
+    down_pay = 1000000 * .2
+    
+print(f'Down payment is: ${down_pay}')
+'''
+# Logicals Operators
+'''
+#If aplicant has high income AND good credit, is elegible for loan
+has_high_income = True
+has_good_credit = False
 
+if has_high_income or has_good_credit: #AND can be repaced for OR, in this case if will be valid only wheter one conditions is true
+    print('Elegible for loan')
 
+else:
+    print('Not elegible for loan')
+
+# AND: both; OR: at least one; NOT: invert the condition TRUE on FALSE 
+'''
+
+# Comparisons operators
+'''
+    # If tempperature is greater than 30 > it's a hot day
+    # otherwise if it´s less than 30 > it's a cold day
+    # otherwise it's neither hot or cold
+
+temp = 29
+if temp >= 30:
+    print("It's a hot day")
+elif temp <= 30:
+    print("It's a cold day")
+else:
+    print("It's a lovely day")
+
+# >=, <=, ==, !=
+
+# Excercise
+"""
+if name is less than 3 characters long
+    name must be at least  characters
+otherwise if it´s more than 50 characters long 
+    name must be a maximum of 50 characters
+otherwise
+    name looks good
+"""
+full_name = input('Please enter your full name: ')
+if len(full_name) < 3:
+    print('Name must be at least 3 characters')
+elif len(full_name) >= 50:
+     print('Name can be maximum of 50 characters')
+else:
+    print('Name looks good')
+'''
+
+# Project: Weight Converter
+"""
+#Ask for weight and then ask for convert into L or K
+weight = float(input('What is your weight: '))
+unit = input('Convert into (L)bs or (K)g: ')
+
+if unit.lower() == "l":
+    weight = weight * 0.45
+    
+elif unit.lower() == "k":
+    weight = weight / 0.45
+    
+print(weight)
+"""
+
+# While loops
+'''
+i = 1
+while i <= 5:
+    print('*' * i)
+    i += 1
+print('done')
+'''
+# Guessing Game > build a guessing game 3 times to find a number (9) shows "You win!" else "you lose"
+'''
+i = 0
+while i < 3: # times to excecute limited to 3 
+    i += 1
+    number = int(input('Enter a number: '))
+    if number == 9:
+        print('You win!!')
+        break
+    # print(i)
+    # print('Try again!!')
+    # print()
+else:
+    print('GAME OVER')
+'''
+
+# Car Game > 
+commands = """Welcome to this game, this is the command list:
+start = Start the car
+stop = Stop de car
+quit = Exit the game
+"""
+
+print(commands)
+action = ''
+started = False
+stoped = False
+while True: # Will excecute until find a break
+    action = input('Enter an action: ').lower()
+
+    if action == 'start':
+        if started:
+            print('Car is already started')
+        else:
+            print('Starting the car')
+            started = True
+    
+    elif action == 'stop':
+        if started == False:
+            print('Car is alredy stopped')
+        else:
+            print('Stoping the car')
+            started = False
+
+    elif action == 'quit': # This action will finish the loop
+        break
+
+    else:
+        #action != 'start' or action != 'stop' or action != 'quit'
+        print("Sorry i don't undesrstand" )
+
+print('GAME OVER')
 
 
 
