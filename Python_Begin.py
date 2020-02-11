@@ -1,6 +1,6 @@
-# #1) Print
-# print('Hello World')
-# print('*' * 10)
+#1) Print
+'''print('Hello World')
+print('*' * 10)'''
 
 #2) Variables
 """
@@ -143,7 +143,7 @@ if hot_day == True:
 elif cold_day == True:
     print('It´s a Cold day, wear warm clothes')
 else:
-    print('It´s a lovely day')
+    print('It´s a lovely day')'''
 
 # Excercise
 """ Price house is $1M
@@ -152,7 +152,7 @@ else:
     otherwise
         they need to put down 20%
     print the down payment
-"""
+
 price = 1000000
 buyer_good = True
 if buyer_good:
@@ -173,9 +173,8 @@ if has_high_income or has_good_credit: #AND can be repaced for OR, in this case 
 
 else:
     print('Not elegible for loan')
-
+"""
 # AND: both; OR: at least one; NOT: invert the condition TRUE on FALSE 
-'''
 
 # Comparisons operators
 '''
@@ -190,7 +189,7 @@ elif temp <= 30:
     print("It's a cold day")
 else:
     print("It's a lovely day")
-
+'''
 # >=, <=, ==, !=
 
 # Excercise
@@ -201,7 +200,7 @@ otherwise if it´s more than 50 characters long
     name must be a maximum of 50 characters
 otherwise
     name looks good
-"""
+
 full_name = input('Please enter your full name: ')
 if len(full_name) < 3:
     print('Name must be at least 3 characters')
@@ -209,7 +208,7 @@ elif len(full_name) >= 50:
      print('Name can be maximum of 50 characters')
 else:
     print('Name looks good')
-'''
+"""
 
 # Project: Weight Converter
 """
@@ -251,7 +250,7 @@ else:
 '''
 
 # Car Game > 
-commands = """Welcome to this game, this is the command list:
+'''commands = """Welcome to this game, this is the command list:
 start = Start the car
 stop = Stop de car
 quit = Exit the game
@@ -285,25 +284,52 @@ while True: # Will excecute until find a break
         #action != 'start' or action != 'stop' or action != 'quit'
         print("Sorry i don't undesrstand" )
 
-print('GAME OVER')
+print('GAME OVER')'''
 
-
-
-
+# For Loops
 """
-#Ejercicio general - Agenda contactos
-nombre = input('ingrese su nombre completo: ')
-fecha_nac = input('Ingrese su fecha de nacimiento (dd/mm/aaaa): ')
-num_celular = input('Ingrese su número de celular: ')
+for item in ['Eder', 'Diana', 'Emilia']: #itering from a list limited of item
+    print(item)
 
-msg = f'{nombre} nació el {fecha_nac} y su número de telefono es: {num_celular}'
-print(msg)
-for nom in nombre:
-    print(nombre)
-    for fec in fecha_nac:
-        print(fecha_nac)
-        for num in num_celular:
-            print(num_celular)
+for item in range (0, 10, 2): #will iterate from 0 to 10 by 2 steps #range(5, 10):will iterate from 5 to 10 range(10) > will iterate 10 times
+    print(item)
+Excercise > Print all prices
+prices = [10, 20, 30]
+cost = ''
+total = 0
+i = 0
+for price in prices:
+    print(f'item {i} cost {price}')
+    i += 1
+    total += price
+print(f'Total: {total}')
 """
 
+# Nested Loops
 
+'''for x in range(4):
+    for y in range(3):
+        print(f"{x}, {y}")'''
+
+# Excercise > print a letter F using 'x' in a list
+
+'''numbers = [5,2,5,2,2]
+for i in numbers:
+    print('X' * i) '''
+
+#List
+
+'''name = ['Eder', 'Diana', 'Emilia', 'Luciana','Jeronimo']
+print(name) # Print all items
+print(name[2:4]) # print item from index 3 to 4 > no modify
+name[0] = 'Emilio' # Modify the list
+print(name)'''
+
+# Write a program to find the largest number in a list
+
+prices = [1, 3 , 5, 7 , 10, 4, 0]
+largets = prices[0]
+for i in prices:
+    if i > largets:
+        largets = i
+print(largets)
