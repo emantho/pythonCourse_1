@@ -327,9 +327,89 @@ print(name)'''
 
 # Write a program to find the largest number in a list
 
-prices = [1, 3 , 5, 7 , 10, 4, 0]
+'''prices = [1, 3 , 5, 7 , 10, 4, 0]
 largets = prices[0]
 for i in prices:
     if i > largets:
         largets = i
-print(largets)
+print(largets)'''
+
+# 2D List > Bulding a Matrix
+'''matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+print(matrix) # This will print all the matrix
+print(matrix[0]) # this will print only the first row
+print(matrix[1][2]) # This will print the index 2 of row 1'''
+
+# List Methods
+
+'''numbers = [5, 6, 7, 8, 10, 0, 50, 8]
+numbers.append(1) # Add an item to the final / Ajouter un element a la fin
+print(numbers)
+numbers.insert(0, 15) # Add an item in the position indicate / Ajouter un element a la position indiquee
+print(numbers)
+numbers.remove(10) # Erase item (value) indicate
+print(numbers)
+numbers.pop() # Erase index selected or default the last item
+print(numbers) 
+print(numbers.index(8)) # Print index of value, if it is finded
+print(6 in numbers) # boolean answer for the value searched
+print(numbers.count(8)) # Quantity of value repeated
+print(numbers.sort()) # Returns none 
+numbers.sort()
+print(numbers) # Order ascending
+numbers.reverse()
+print(numbers) # Order descending
+numbers2 = numbers.copy()
+numbers.append(99)
+print(numbers) # Order descending
+print(numbers2) # Order descending
+numbers.clear() # Erase all items in list
+print(numbers)
+
+# Exercise > Write a program to remove the duplicate in a list
+
+numbers = [5, 6, 7, 8, 10, 0, 50, 8] # List whit repeated numbers
+uniques = [] # List to copy no repeated numbers
+for number in numbers: # iterate in general list
+    if number not in uniques: # Search for NOT repeated numbers only
+        uniques.append(number) # Add if condition is true
+print(uniques)
+'''
+# Tuples > cannot muted or modified, are usefull when dont want some modify list
+
+'''number = (1, 2, 3) # Only can use method count and index
+print(number[0])'''
+
+# Unpacking
+'''coordinates = (1, 2, 3) # Can be used whit list too
+x, y, z = coordinates
+print(x)
+print(y)
+print(z)'''
+
+# Dictionaries
+'''customer = {
+    'name': 'Eder Manjarres',
+    'age': 33,
+    'is_verified': True
+}
+customer['name'] = 'Diana Pinzon'
+customer['birthdate'] = 'Dic 12 1985'
+print(customer)
+'''
+#Excercise > Phone number in "int" converto to "string"
+phone = input("Phone: ")
+digits_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four"
+}
+output = ""
+for ch in phone:
+    output += digits_mapping.get(ch, "!") + ":"
+print(output)
