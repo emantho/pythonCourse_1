@@ -6,27 +6,27 @@ print('*' * 10)'''
 """
 price = 10 #this is a integer
 rating = 4.9 # This is a float
-name = 'Eder' # This is a string
+first_name = 'Eder' # This is a string
 is_published = False # This is a boolean > siempre inician con mayuscula (capital)
 print(price)
 
 #-- Excercise --
-#Check a patient name named josn Smith, he´s 20 years old and is a new patient
-name = 'John Smith'
+#Check a patient first_name first_named josn Smith, he´s 20 years old and is a new patient
+first_name = 'John Smith'
 age = 20
 new_patient = True
 """
 
 #3 Getting input
 """
-name = input('What is your name: ') #recibe las entradas de teclado, puede llevar un mensaje
-print('Hi ' + name)
+first_name = input('What is your first_name: ') #recibe las entradas de teclado, puede llevar un mensaje
+print('Hi ' + first_name)
 
 #-- Excercise --
-# Ask tow persons name and favourite color. Then, print a message like "Eder likes Red"
-full_name = input('What is your name? ')
+# Ask tow persons first_name and favourite color. Then, print a message like "Eder likes Red"
+full_first_name = input('What is your first_name? ')
 color = input('What is your favorite color? ')
-print(full_name + "'s favorite color is " + color )
+print(full_first_name + "'s favorite color is " + color )
 """
 
 #Type convertion
@@ -194,20 +194,20 @@ else:
 
 # Excercise
 """
-if name is less than 3 characters long
-    name must be at least  characters
+if first_name is less than 3 characters long
+    first_name must be at least  characters
 otherwise if it´s more than 50 characters long 
-    name must be a maximum of 50 characters
+    first_name must be a maximum of 50 characters
 otherwise
-    name looks good
+    first_name looks good
 
-full_name = input('Please enter your full name: ')
-if len(full_name) < 3:
-    print('Name must be at least 3 characters')
-elif len(full_name) >= 50:
-     print('Name can be maximum of 50 characters')
+full_first_name = input('Please enter your full first_name: ')
+if len(full_first_name) < 3:
+    print('first_name must be at least 3 characters')
+elif len(full_first_name) >= 50:
+     print('first_name can be maximum of 50 characters')
 else:
-    print('Name looks good')
+    print('first_name looks good')
 """
 
 # Project: Weight Converter
@@ -319,11 +319,11 @@ for i in numbers:
 
 #List
 
-'''name = ['Eder', 'Diana', 'Emilia', 'Luciana','Jeronimo']
-print(name) # Print all items
-print(name[2:4]) # print item from index 3 to 4 > no modify
-name[0] = 'Emilio' # Modify the list
-print(name)'''
+'''first_name = ['Eder', 'Diana', 'Emilia', 'Luciana','Jeronimo']
+print(first_name) # Print all items
+print(first_name[2:4]) # print item from index 3 to 4 > no modify
+first_name[0] = 'Emilio' # Modify the list
+print(first_name)'''
 
 # Write a program to find the largest number in a list
 
@@ -393,16 +393,16 @@ print(z)'''
 
 # Dictionaries
 '''customer = {
-    'name': 'Eder Manjarres',
+    'first_name': 'Eder Manjarres',
     'age': 33,
     'is_verified': True
 }
-customer['name'] = 'Diana Pinzon'
+customer['first_name'] = 'Diana Pinzon'
 customer['birthdate'] = 'Dic 12 1985'
-print(customer)
-'''
+print(customer)'''
+
 #Excercise > Phone number in "int" converto to "string"
-phone = input("Phone: ")
+'''phone = input("Phone: ")
 digits_mapping = {
     "1": "One",
     "2": "Two",
@@ -413,3 +413,84 @@ output = ""
 for ch in phone:
     output += digits_mapping.get(ch, "!") + ":"
 print(output)
+'''
+
+# Others example dicctionaries 
+'''message = input("> ")
+words = message.split(" ")
+emojis = {
+    ":)": "😀",
+    ":(": "😥"
+}
+output = ""
+for word in words:
+    output += emojis.get(word, word) + " "
+print(output)'''
+
+
+# -_-_-_- Functions _-_-_-
+'''
+def greet_user():
+    print('hi there')
+    print('Welcome aboard')
+
+
+print('start')
+greet_user()
+print('Finish')'''
+
+# Functions with Parameters
+'''def greet_user(first_name, last_name):
+    print(f'Hi {first_name} {last_name}!')
+    print('Welcome aboard')
+
+
+print('start')
+greet_user('Eder', 'Manjarres')
+greet_user('Diana', 'Pinzon')
+print('Finish')
+'''
+# Keywords Arguments
+'''def greet_user(first_name, last_name):
+    print(f'Hi {first_name} {last_name}!')
+    print('Welcome aboard')
+
+
+print('start')
+greet_user(last_name = 'Manjarres', first_name = 'Eder') 
+greet_user('Diana', last_name = 'Pinzon')
+print('Finish')'''
+
+# Return Statement
+'''def square(number):
+    return number * number
+
+result = square(float(input('> '))) # can be printed directly 
+print(result)
+
+'''
+
+# Reusable function
+'''def emojis_converter(message):
+    words = message.split(" ")
+    emojis = {
+        ":)": "😀",
+        ":(": "😥"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+
+message = input("> ")
+
+print(emojis_converter(message))'''
+
+# Exceptions
+try: 
+    age = int(input("Age: "))
+    print(age)
+except ValueError:
+    print("invalid Value")
+
