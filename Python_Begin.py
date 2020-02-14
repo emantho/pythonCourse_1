@@ -482,15 +482,86 @@ print(result)
         output += emojis.get(word, word) + " "
     return output
 
-
 message = input("> ")
 
 print(emojis_converter(message))'''
 
 # Exceptions
-try: 
+'''try: 
     age = int(input("Age: "))
     print(age)
 except ValueError:
     print("invalid Value")
+'''
+# Clases
+'''class Point:  #the classes begin with capital letter
+    def _init__(self, x, y):
+        self.x = x
+        self.y = y
 
+    def move(self): # Never a function inside a class would be empty, instead use "self"
+        print("move")
+    
+    def draw(self):
+        print("draw")
+
+
+point = Point(10, 50)
+print(point.x)
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+
+john = Person("john Smith")
+john.talk()
+
+nombre = input("")
+nombre = Person(nombre)
+nombre.talk()'''
+
+# Inheritance
+'''class Mammal: # Mother class who give functions to sons or others class to no repeat this
+    def walk(self):
+        print("walk")
+
+class Dog(Mammal): # Son's class that receives the functions 
+    def bark(self):
+        print("Bark")
+
+class Rat(Mammal):
+    pass # this is necessary for no leave an empty class
+
+class Cat(Mammal):
+    def be_annoying(self):
+        print("Annoying")
+
+
+dog1 = Dog()
+dog1.walk()
+
+cat1 = Cat()
+cat1.be_annoying()'''
+
+# Modules
+# Function moves to a new file name converters.py
+'''def lbs_to_kg(weight):
+    return weight * 0.45
+
+
+def kg_to_lbs(weight):
+    return weight / 0.45
+
+import converters # We can import the module converters with all his functions
+print(converters.kg_to_lbs(70))
+
+import kg_to_lbs from converters
+from converters import lbs_to_kg'''
+
+from utils import find_max
+items = [3,1,6,9,4,6]
+print(find_max(items))
